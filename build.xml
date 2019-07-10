@@ -7,8 +7,10 @@
 <project basedir="." default="build" name="SAAF">
 	<property environment="env" />
 	<property name="debuglevel" value="source,lines,vars" />
-	<property name="comiplerlevel.target" value="1.6" />
-	<property name="comiplerlevel.source" value="1.6" />
+	<property name="comiplerlevel.target" value="1.8" />
+	<property name="comiplerlevel.source" value="1.8" />
+	<property name="ant.build.javac.source" value="1.8"/>
+	<property name="ant.build.javac.target" value="1.8"/>
 	<property name="build.dir" location="build" />
 	<property name="build.prod.dir" location="${build.dir}/prod" />
 	<property name="build.test.dir" location="${build.dir}/test" />
