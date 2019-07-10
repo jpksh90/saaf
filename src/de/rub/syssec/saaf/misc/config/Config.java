@@ -67,6 +67,14 @@ public class Config implements ConfigInterface {
 		if (instance == null) {
 			instance = new Config();
 		}
+		/*
+		 * private volatile static Config instance;
+		 * synchronized(Config.class) {
+				if (instance == null) {
+					instance = new Config();
+				}
+			}
+		 */
 		return instance;
 	}
 
@@ -91,33 +99,25 @@ public class Config implements ConfigInterface {
 	 * @throws IOException
 	 */
 	public void readConfigFile() throws FileNotFoundException, IOException {
-		// check if the SAAF_HOME environment variable
 		settings = new Properties();
-		String saafHome = System.getenv("SAAF_HOME");
+		String saafHome = System.getenv("SAAF_HOME"); // check if the SAAF_HOME environment variable exists
 		if (saafHome != null) {
 			setConfigValue(ConfigKeys.DIRECTORY_HOME, saafHome);
-		} else {
+		} else { 
 			// default to local directory if the variable is not set
-			setConfigValue(ConfigKeys.DIRECTORY_HOME,
-					System.getProperty("user.dir"));
+			setConfigValue(ConfigKeys.DIRECTORY_HOME, System.getProperty("user.dir"));
 		}
+		// C:\Users\Can\Desktop\develop\eclipse-workspace\saaf + \conf
 		LOGGER.info("SAAF will be looking for configuration in:"
 				+ getConfigValue(ConfigKeys.DIRECTORY_HOME) + File.separator
 				+ "conf");
-
+		// C:\Users\Can\Desktop\develop\eclipse-workspace\saaf + \conf\saaf.conf
 		File config = new File(getConfigValue(ConfigKeys.DIRECTORY_HOME)
 				+ File.separator + "conf" + File.separator + "saaf.conf");
-		FileInputStream propInputStream = null;
-
-		if (config.exists()) {
-			propInputStream = new FileInputStream(config);
-		} else {
-			propInputStream = new FileInputStream(
-					getConfigValue(ConfigKeys.DIRECTORY_HOME) + File.separator
-							+ "conf" + File.separator + "saaf.conf");
-		}
-
-		settings.load(propInputStream);
+		FileInputStream propInputStream = new FileInputStream(config);
+		/* overrides existing properties only
+		 * if propInputStream file contains the same keys */
+		settings.load(propInputStream); 
 		propInputStream.close();
 	}
 
@@ -133,8 +133,7 @@ public class Config implements ConfigInterface {
 	 */
 	public void validate() {
 		boolean foundErrors = false;
-		HashSet<Object> keysInConfigFile = new HashSet<Object>(
-				settings.keySet());
+		HashSet<Object> keysInConfigFile = new HashSet<Object>(settings.keySet());
 		LOGGER.info("Validating configuration...");
 		for (Object keyInConfigFile : keysInConfigFile) {
 			String entry = (String) keyInConfigFile;
@@ -346,7 +345,7 @@ public class Config implements ConfigInterface {
 	}
 
 	public String getConfigValue(ConfigKeys key) {
-		return this.getConfigValue(key, key.defaultString);
+		return this.getConfigValue(key, key.defaultString); //TODO is key.defaultString always null?
 	}
 
 	public File getFileConfigValue(ConfigKeys key) {
