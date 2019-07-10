@@ -88,8 +88,7 @@ public class Main {
 				watcher.startWatching();
 			}
 			// Create GUI?
-			else if (conf.getBooleanConfigValue(
-					ConfigKeys.ANALYSIS_IS_HEADLESS)) {
+			else if (conf.getBooleanConfigValue(ConfigKeys.ANALYSIS_IS_HEADLESS)) {
 				// no GUI
 				exitcode = Headless.startAnalysis(apkPath);
 			} else {
@@ -133,13 +132,10 @@ public class Main {
 			}
 			LOGGER.info("Deleting directories...");
 
-			FileUtils.deleteDirectory(new File(conf
-					.getConfigValue(ConfigKeys.DIRECTORY_APPS)));
-			File f = new File(
-					conf.getConfigValue(ConfigKeys.DIRECTORY_APPS));// necessary?
+			FileUtils.deleteDirectory(new File(conf.getConfigValue(ConfigKeys.DIRECTORY_APPS)));
+			File f = new File(conf.getConfigValue(ConfigKeys.DIRECTORY_APPS));// necessary?
 			f.mkdirs();// necessary?
-			FileUtils.deleteDirectory(new File(conf
-					.getConfigValue(ConfigKeys.DIRECTORY_APPS)));
+			FileUtils.deleteDirectory(new File(conf.getConfigValue(ConfigKeys.DIRECTORY_APPS)));
 			f = new File(conf.getConfigValue(ConfigKeys.DIRECTORY_BYTECODE));// necessary?
 			f.mkdirs();// necessary?
 		}
@@ -216,7 +212,7 @@ public class Main {
 			usage(true);
 			exit();
 		}
-
+		
 		if (cmdLine.hasOption(props.getProperty("options.version.short"))) {
 			version();
 			exit();
@@ -289,7 +285,8 @@ public class Main {
 					.println("Could not load commandline properties. Exiting.");
 			exit();
 		}
-		
+		/* addOption(String shortOpt, String longOpt, Bollean hasArg, String desc)
+		   hasArg - flag signalling if an argument is required after this option */
 		basicOptions.addOption(props.getProperty("options.version.short"),
 				props.getProperty("options.version.long"), false,
 				props.getProperty("options.version.descr"));
