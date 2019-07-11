@@ -47,6 +47,10 @@ import de.rub.syssec.saaf.misc.config.Config;
 import de.rub.syssec.saaf.misc.config.ConfigKeys;
 import de.rub.syssec.saaf.model.APICalls;
 
+// -hl ./DroidBench/apk/AndroidSpecific --report ./generatedReports/
+// -hl ./customApps/ --report ./generatedReports/ -st
+// -hl ./customApps/real/ --report ./generatedReports/ -st
+
 public class Main {
 
 	private static final Logger LOGGER = Logger.getLogger(Main.class);
