@@ -35,8 +35,6 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.jf.util.ConsoleUtil;
-import org.jf.util.SmaliHelpFormatter;
 
 import de.rub.syssec.saaf.db.DatabaseHelper;
 import de.rub.syssec.saaf.db.datasources.DataSourceException;
@@ -404,38 +402,38 @@ public class Main {
 	 *         (JesusFreke)
 	 */
 	private static void usage(boolean printHeadlessGuiOptions) {
-		SmaliHelpFormatter formatter = new SmaliHelpFormatter();
-		int consoleWidth = ConsoleUtil.getConsoleWidth();
-		formatter.setWidth(consoleWidth);
-
-		PrintWriter writer = new PrintWriter(System.out);
-
-		writer.write("SAAF  Copyright (C) 2013  syssec.rub.de\n");
-		writer.write("This program comes with ABSOLUTELY NO WARRANTY.\n");
-		writer.write("This is free software, and you are welcome to redistribute it\n");
-		writer.write("under certain conditions.");
-
-		writer.write("\n\n#########################################\n");
-		writer.write("# SAAF: A static analyzer for APK files #\n");
-		writer.write("#########################################\n");
-		writer.write("\nUsage: java -jar saaf.jar [options] [file/directory]");
-		writer.write("\nIf no options are set, SAAF will start in GUI mode.\n");
-
-		writer.write("\nBasic Options:\n");
-		formatter.printOptions(writer, consoleWidth, basicOptions, 1, 3);
-
-		if (printHeadlessGuiOptions) {
-			writer.write("\nHeadless Options:\n");
-			formatter.printOptions(writer, consoleWidth, headlessOptions, 1, 3);
-
-			writer.write("\nGUI Options:\n");
-			formatter.printOptions(writer, consoleWidth, guiOptions, 1, 3);
-
-			writer.write("\nReport, DB and Log Options:\n");
-			formatter.printOptions(writer, consoleWidth, reportDbLogOptions, 1,
-					3);
-		}
-		writer.flush();
+//		SmaliHelpFormatter formatter = new SmaliHelpFormatter();
+//		int consoleWidth = ConsoleUtil.getConsoleWidth();
+//		formatter.setWidth(consoleWidth);
+//
+//		PrintWriter writer = new PrintWriter(System.out);
+//
+//		writer.write("SAAF  Copyright (C) 2013  syssec.rub.de\n");
+//		writer.write("This program comes with ABSOLUTELY NO WARRANTY.\n");
+//		writer.write("This is free software, and you are welcome to redistribute it\n");
+//		writer.write("under certain conditions.");
+//
+//		writer.write("\n\n#########################################\n");
+//		writer.write("# SAAF: A static analyzer for APK files #\n");
+//		writer.write("#########################################\n");
+//		writer.write("\nUsage: java -jar saaf.jar [options] [file/directory]");
+//		writer.write("\nIf no options are set, SAAF will start in GUI mode.\n");
+//
+//		writer.write("\nBasic Options:\n");
+//		formatter.printOptions(writer, consoleWidth, basicOptions, 1, 3);
+//
+//		if (printHeadlessGuiOptions) {
+//			writer.write("\nHeadless Options:\n");
+//			formatter.printOptions(writer, consoleWidth, headlessOptions, 1, 3);
+//
+//			writer.write("\nGUI Options:\n");
+//			formatter.printOptions(writer, consoleWidth, guiOptions, 1, 3);
+//
+//			writer.write("\nReport, DB and Log Options:\n");
+//			formatter.printOptions(writer, consoleWidth, reportDbLogOptions, 1,
+//					3);
+//		}
+//		writer.flush();
 		// Do not close writer, otherwise System.out would be dead.
 	}
 

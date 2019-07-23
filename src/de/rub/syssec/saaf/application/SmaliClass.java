@@ -27,6 +27,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
 import de.rub.syssec.saaf.analysis.steps.obfuscation.Entropy;
@@ -521,9 +522,13 @@ public class SmaliClass implements ClassInterface {
 	@Override
 	public String getRelativeFile() {
 		String separator = File.separator;//this is too fix issues with File.separator under windows being "\", which makes the replaceFirst fail, due to \ being a special char in regex
-		if(separator.equals("\\"))
-			separator = separator + separator;
-		return this.smaliFile.getAbsolutePath().replaceFirst(app.getDecompiledContentDir().getAbsolutePath()+separator+"smali"+separator, "");
+//		if(separator.equals("\\")) {
+//			separator = separator + separator;
+//		}
+		String relativeFilePath = StringUtils.substringAfter(this.smaliFile.getAbsolutePath(), 
+				app.getDecompiledContentDir().getAbsolutePath()+separator+"smali"+separator);
+//		return this.smaliFile.getAbsolutePath().replaceFirst(app.getDecompiledContentDir().getAbsolutePath()+separator+"smali"+separator, "");
+		return relativeFilePath;
 	}
 	
 	public String toString(){

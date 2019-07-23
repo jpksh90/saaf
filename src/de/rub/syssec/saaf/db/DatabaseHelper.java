@@ -291,7 +291,7 @@ public class DatabaseHelper {
 														// BB(TODO).
 						+ "hash_fuzzy VARCHAR(127),"
 						+ "name VARCHAR(255),"
-						+ "parameters VARCHAR(255),"
+						+ "parameters VARCHAR(755),"
 						+ "return_value VARCHAR(255),"
 						+ "path_to_cfg text,"
 						+ "entropy DOUBLE,"
