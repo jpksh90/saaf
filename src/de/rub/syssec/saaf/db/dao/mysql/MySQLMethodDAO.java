@@ -136,6 +136,7 @@ public class MySQLMethodDAO implements NuMethodDAO {
 			
 			if(entity.getParameterString()!=null)
 			{
+				System.out.println("\n\nParameter:\n\n" + entity.getParameterString() + "\n\n");
 				insert.setString(++index, entity.getParameterString());
 			}else
 			{
