@@ -415,7 +415,13 @@ public class Constant implements ConstantInterface {
 				// code looks like this [[[Ljava/lang/String; We do not want the [, L and the terminating ;
 				int endOffset = 0; // check if it ends w/ ; (this depends on the input whether it was already removed
 				if (code[code.length-1] == ';') endOffset = 1;
-				typeDescription = new String(ByteUtils.subbytes(code, arrayDimension+1, code.length-endOffset));
+				try {
+					typeDescription = new String(ByteUtils.subbytes(code, arrayDimension+1, code.length-endOffset));
+				}
+				catch (SyntaxException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (STRING_DESCRIPTION.equals(typeDescription)) type = Type.STRING;
 			}
 			else if (ad > 0) {

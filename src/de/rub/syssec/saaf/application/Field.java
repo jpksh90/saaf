@@ -120,7 +120,13 @@ public class Field implements FieldInterface {
 		if (fieldName == null) {
 			int colonIndex = ByteUtils.indexOf(cl.getLine(), ':');
 			int spaceBeforeColonPos = ByteUtils.indexOfReverse(cl.getLine(), ' ', colonIndex);
-			fieldName = new String(ByteUtils.subbytes(cl.getLine(), spaceBeforeColonPos+1, colonIndex));
+			try {
+				fieldName = new String(ByteUtils.subbytes(cl.getLine(), spaceBeforeColonPos+1, colonIndex));
+			}
+			catch (SyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return fieldName;
 		

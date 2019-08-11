@@ -162,7 +162,13 @@ public class Instruction implements InstructionInterface {
 			case ' ':
 				if (!inQuotes && !inKlammer) { // split it
 					if (lastIndex != i)
-						list.addLast(ByteUtils.subbytes(input, lastIndex, i));
+						try {
+							list.addLast(ByteUtils.subbytes(input, lastIndex, i));
+						}
+						catch (SyntaxException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					lastIndex = i + 1; // do not copy ' ' the next time
 				} else {
 					// do nothing
@@ -184,7 +190,13 @@ public class Instruction implements InstructionInterface {
 						break; // do not split here
 					}
 					if (lastIndex != i)
-						list.addLast(ByteUtils.subbytes(input, lastIndex, i));
+						try {
+							list.addLast(ByteUtils.subbytes(input, lastIndex, i));
+						}
+						catch (SyntaxException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					lastIndex = i + 1; // do not copy ' ' the next time
 					if (i == input.length - 1)
 						copyLastSequence = false; // reached the end
@@ -210,7 +222,13 @@ public class Instruction implements InstructionInterface {
 			case '}':
 				if (inKlammer && !inQuotes) { // found closing }
 					// copy all except { and }
-					list.addLast(ByteUtils.subbytes(input, lastIndex, i));
+					try {
+						list.addLast(ByteUtils.subbytes(input, lastIndex, i));
+					}
+					catch (SyntaxException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					lastIndex = i + 1; // do not copy } the next time something
 										// is copied
 					inKlammer = false;
@@ -248,7 +266,13 @@ public class Instruction implements InstructionInterface {
 						continue; // ignore, " im String
 					else { // quotes end/close
 						// copy all except the " at the beginning and end
-						list.addLast(ByteUtils.subbytes(input, lastIndex, i + 1));
+						try {
+							list.addLast(ByteUtils.subbytes(input, lastIndex, i + 1));
+						}
+						catch (SyntaxException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 						lastIndex = i + 1;
 						copyLastSequence = false;
 						inQuotes = false;
@@ -268,7 +292,13 @@ public class Instruction implements InstructionInterface {
 		// only relevant if the last part is a "xyz"
 		if (copyLastSequence) {
 			// copy last or only the one element
-			list.addLast(ByteUtils.subbytes(input, lastIndex, input.length));
+			try {
+				list.addLast(ByteUtils.subbytes(input, lastIndex, input.length));
+			}
+			catch (SyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		// for (byte[] bb : list) {
 		// System.out.println(" ] = "+new String(bb));
@@ -294,8 +324,14 @@ public class Instruction implements InstructionInterface {
 		} else if (parameters[0] == '{'
 				&& parameters[parameters.length - 1] == '}') { // sanity check
 			// strip the '{' and '}'
-			parameters = ByteUtils.subbytes(parameters, 1,
-					parameters.length - 1);
+			try {
+				parameters = ByteUtils.subbytes(parameters, 1,
+						parameters.length - 1);
+			}
+			catch (SyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		int lastIndex = 0;
 		if (ByteUtils.contains(parameters, ',')) { // eg {v7, v8}
@@ -306,8 +342,14 @@ public class Instruction implements InstructionInterface {
 						continue;
 					} else {
 						found = false;
-						result.addLast(ByteUtils.subbytes(parameters,
-								lastIndex, i));
+						try {
+							result.addLast(ByteUtils.subbytes(parameters,
+									lastIndex, i));
+						}
+						catch (SyntaxException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 				} else { // currently no register is read
 					if (parameters[i] != ' ') {
@@ -319,8 +361,14 @@ public class Instruction implements InstructionInterface {
 				}
 			}
 			// copy last (or only one) register
-			result.add(ByteUtils.subbytes(parameters, lastIndex,
-					parameters.length));
+			try {
+				result.add(ByteUtils.subbytes(parameters, lastIndex,
+						parameters.length));
+			}
+			catch (SyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} else if (ByteUtils.contains(parameters, '.')) { // eg {v0 .. v5}
 			byte[] vA = null;
 			byte[] vB = null;
@@ -332,7 +380,13 @@ public class Instruction implements InstructionInterface {
 					} else {
 						found = false;
 						// lastIndex+1: cut the v from eg v12
-						vA = ByteUtils.subbytes(parameters, lastIndex + 1, i);
+						try {
+							vA = ByteUtils.subbytes(parameters, lastIndex + 1, i);
+						}
+						catch (SyntaxException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 				} else { // currently no register is read
 					if (parameters[i] != ' ' && parameters[i] != '.') {
@@ -344,8 +398,14 @@ public class Instruction implements InstructionInterface {
 				}
 			}
 			// copy last (or only one) register
-			vB = ByteUtils.subbytes(parameters, lastIndex + 1,
-					parameters.length); // lastIndex+1: cut the v from eg v12.
+			try {
+				vB = ByteUtils.subbytes(parameters, lastIndex + 1,
+						parameters.length);
+			}
+			catch (SyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} // lastIndex+1: cut the v from eg v12.
 			// now "create" all intermediate registers and put them into the
 			// list
 			int fromReg = Integer.parseInt(new String(vA));
@@ -710,8 +770,20 @@ public class Instruction implements InstructionInterface {
 		byte[][] cf = new byte[2][];
 		int classEnd = ByteUtils.indexOf(smaliCode, ';');
 		int varName = ByteUtils.indexOf(smaliCode, ':');
-		cf[0] = ByteUtils.subbytes(smaliCode, 1, classEnd);
-		cf[1] = ByteUtils.subbytes(smaliCode, classEnd + 3, varName);
+		try {
+			cf[0] = ByteUtils.subbytes(smaliCode, 1, classEnd);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			cf[1] = ByteUtils.subbytes(smaliCode, classEnd + 3, varName);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return cf;
 	}
 
@@ -745,10 +817,28 @@ public class Instruction implements InstructionInterface {
 		if (smaliCode[offset] == 'L') {
 			offset++; // we have a class an want to also skip the L
 		}
-		cmpr[0] = ByteUtils
-				.subbytes(smaliCode, offset, dashPos - classEndOffset); // class
-		cmpr[1] = ByteUtils.subbytes(smaliCode, dashPos + 2, methodEnd); // method
-		cmpr[2] = ByteUtils.subbytes(smaliCode, methodEnd + 1, parametersEnd); // parameters
+		try {
+			cmpr[0] = ByteUtils
+					.subbytes(smaliCode, offset, dashPos - classEndOffset);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // class
+		try {
+			cmpr[1] = ByteUtils.subbytes(smaliCode, dashPos + 2, methodEnd);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // method
+		try {
+			cmpr[2] = ByteUtils.subbytes(smaliCode, methodEnd + 1, parametersEnd);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // parameters
 		cmpr[3] = ByteUtils.subbytes(smaliCode, parametersEnd + 1); // return value
 		return cmpr;
 	}

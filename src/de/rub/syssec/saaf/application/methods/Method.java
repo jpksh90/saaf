@@ -92,8 +92,15 @@ public class Method implements MethodInterface {
 		int closingParenthesisIndex = ByteUtils.indexOf(firstLine, ')');
 		int spaceBeforeIndex = ByteUtils.indexOfReverse(firstLine, ' ',
 				openingParenthesisIndex);
-		byte[] n = ByteUtils.subbytes(firstLine, spaceBeforeIndex + 1,
-				openingParenthesisIndex); // cut the space
+		byte[] n = new byte[0];
+		try {
+			n = ByteUtils.subbytes(firstLine, spaceBeforeIndex + 1,
+					openingParenthesisIndex);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // cut the space
 		if (Arrays.equals(n, CONSTRUCTOR_NAME))
 			methodType = METHOD_TYPE.CONSTRUCTOR;
 		else if (Arrays.equals(n, STATIC_CONSTRUCTOR_NAME))
@@ -104,14 +111,27 @@ public class Method implements MethodInterface {
 
 		// Check if the method is static, only use the first part b/c the method
 		// could have the word static in its name
-		byte[] lineTillSpace = ByteUtils.subbytes(firstLine, 0,
-				spaceBeforeIndex);
+		byte[] lineTillSpace = new byte[0];
+		try {
+			lineTillSpace = ByteUtils.subbytes(firstLine, 0,
+					spaceBeforeIndex);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if (ByteUtils.contains(lineTillSpace, "static".getBytes()))
 			isStatic = true;
 
 		// get the parameters
-		rawParameters = ByteUtils.subbytes(firstLine,
-				openingParenthesisIndex + 1, closingParenthesisIndex);
+		try {
+			rawParameters = ByteUtils.subbytes(firstLine,
+					openingParenthesisIndex + 1, closingParenthesisIndex);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		// return value
 		returnValue = ByteUtils.subbytes(firstLine,	closingParenthesisIndex + 1);

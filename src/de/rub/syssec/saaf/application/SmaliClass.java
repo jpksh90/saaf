@@ -42,6 +42,7 @@ import de.rub.syssec.saaf.model.application.FieldInterface;
 import de.rub.syssec.saaf.model.application.MethodInterface;
 import de.rub.syssec.saaf.model.application.PackageInterface;
 import de.rub.syssec.saaf.model.application.SmaliClassError;
+import de.rub.syssec.saaf.model.application.SyntaxException;
 import de.rub.syssec.saaf.model.application.instruction.InstructionType;
 
 /**
@@ -226,23 +227,48 @@ public class SmaliClass implements ClassInterface {
 		for (CodeLineInterface cl : otherCL) {
 			if (cl.startsWith(SUPER)) { // .super Landroid/app/Activity;
 				byte[] tmp = Instruction.split(cl.getLine()).getLast();
-				superClass = new String(ByteUtils.subbytes(tmp, 1, tmp.length-1)).replace("/", ".");
+				try {
+					superClass = new String(ByteUtils.subbytes(tmp, 1, tmp.length-1)).replace("/", ".");
+				}
+				catch (SyntaxException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			else if (cl.startsWith(IMPLEMENTS)) { // .implements Ljava/io/Serializable;
 				byte[] tmp = Instruction.split(cl.getLine()).getLast();
-				implementedInterfaces.add(new String(ByteUtils.subbytes(tmp, 1, tmp.length-1)).replace("/", "."));
+				try {
+					implementedInterfaces.add(new String(ByteUtils.subbytes(tmp, 1, tmp.length-1)).replace("/", "."));
+				}
+				catch (SyntaxException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			else if (cl.startsWith(CLASS)) { // .class public Ltest/android/AndroidTestActivity;
 				byte[] tmp = Instruction.split(cl.getLine()).getLast();
 				List<String> packageNames = new ArrayList<String>();
-				String x[] = new String(ByteUtils.subbytes(tmp, 1, tmp.length-1)).split("/");
+				String x[] = new String[0];
+				try {
+					x = new String(ByteUtils.subbytes(tmp, 1, tmp.length-1)).split("/");
+				}
+				catch (SyntaxException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				for (int i = 0; i<x.length-1; i++) { // do not include the class name
 					packageNames.add(x[i]);
 				}
 				this.javaPackage.setName(packageNames);
 			} else if (cl.startsWith(SOURCE)) {// .source "MagicSMSActivity.java"
 				byte[] tmp = Instruction.split(cl.getLine()).getLast();
-				sourceFile = new String(ByteUtils.subbytes(tmp, 1, tmp.length-1));
+				try {
+					sourceFile = new String(ByteUtils.subbytes(tmp, 1, tmp.length-1));
+				}
+				catch (SyntaxException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 		

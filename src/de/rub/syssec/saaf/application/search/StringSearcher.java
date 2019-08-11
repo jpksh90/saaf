@@ -22,6 +22,7 @@ import de.rub.syssec.saaf.misc.ByteUtils;
 import de.rub.syssec.saaf.model.application.ApplicationInterface;
 import de.rub.syssec.saaf.model.application.ClassInterface;
 import de.rub.syssec.saaf.model.application.CodeLineInterface;
+import de.rub.syssec.saaf.model.application.SyntaxException;
 
 /**
  * Searches for all Strings in all smali files.
@@ -53,7 +54,14 @@ public class StringSearcher {
 						if (indexOfOpeningQuote < 0) indexOfOpeningQuote = i;
 						else {
 							// found a closing one
-							String s = new String(ByteUtils.subbytes(codeline, indexOfOpeningQuote, i+1));
+							String s = "";
+							try {
+								s = new String(ByteUtils.subbytes(codeline, indexOfOpeningQuote, i+1));
+							}
+							catch (SyntaxException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 							FoundString fs = new FoundString(cl, s);
 							foundStringsVec.add(fs);
 							indexOfOpeningQuote = -1; // reset, there might be more strings in one line

@@ -24,6 +24,8 @@ import java.util.Arrays;
 
 import org.apache.http.util.ByteArrayBuffer;
 
+import de.rub.syssec.saaf.model.application.SyntaxException;
+
 
 /**
  * Byte utilities.
@@ -165,10 +167,16 @@ public class ByteUtils {
 	 * @param srcEnd
 	 *            The ending index (exclusive)
 	 * @return The new, populated byte array
+	 * @throws SyntaxException 
 	 */
-	public static byte[] subbytes(byte[] source, int srcBegin, int srcEnd) {
+	public static byte[] subbytes(byte[] source, int srcBegin, int srcEnd) 
+			throws SyntaxException {
 		byte destination[];
 
+		if (srcEnd < srcBegin) {
+			throw new SyntaxException("srcEnd is less than srcBegin");
+		}
+		
 		destination = new byte[srcEnd - srcBegin];
 		getBytes(source, srcBegin, srcEnd, destination, 0);
 
@@ -184,7 +192,14 @@ public class ByteUtils {
 	 * @return The new, populated byte array
 	 */
 	public static byte[] subbytes(byte[] source, int srcBegin) {
-		return subbytes(source, srcBegin, source.length);
+		try {
+			return subbytes(source, srcBegin, source.length);
+		}
+		catch (SyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 
@@ -367,7 +382,14 @@ public class ByteUtils {
 		int index = indexOf(source, c, offset);
 		if (index < 0) return source;
 		else {
-			return subbytes(source, 0, index);
+			try {
+				return subbytes(source, 0, index);
+			}
+			catch (SyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
 		}
 	}
 	
@@ -382,7 +404,14 @@ public class ByteUtils {
 		int index = indexOfReverse(source, c, offset);
 		if (index < 0) return source;
 		else {
-			return subbytes(source, index, source.length);
+			try {
+				return subbytes(source, index, source.length);
+			}
+			catch (SyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return null;
+			}
 		}
 	}
 }
