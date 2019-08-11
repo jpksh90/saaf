@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Properties;
 
 import org.apache.commons.cli.CommandLine;
@@ -64,6 +66,8 @@ public class Main {
 	private static int exitcode = 0;
 
 	public static void main(String[] args) throws Exception {
+		Instant start = Instant.now();
+		
 		// make sure log4j configuration is read before doing anything else
 		updateLog4jConfiguration(false, false);
 		try {
@@ -106,6 +110,8 @@ public class Main {
 			LOGGER.error("An error occured", e);
 			System.exit(1);
 		}
+		Instant end = Instant.now();
+		System.out.println("\n\nTotal Execution Time:\n" + Duration.between(start, end) + "\n\n");
 		exit();
 	}
 
