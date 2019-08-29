@@ -136,4 +136,7 @@
 
   <heuristic-pattern pattern="android/telephony/TelephonyManager->getMeid" 
     type="INVOKE"	hvalue="0" description="MEID API Level 26+" active="true" />
+
+  <heuristic-pattern pattern="android/telephony/gsm/SmsManager->sendMultimediaMessage"
+		type="INVOKE" hvalue="0" description="NEW - send MMS" active="true" />
 </heuristic-patterns>
