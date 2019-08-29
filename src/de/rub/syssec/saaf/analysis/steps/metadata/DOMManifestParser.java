@@ -358,6 +358,30 @@ public class DOMManifestParser implements ManifestParser {
 		}
 		LOGGER.debug("Finished analyzing requested permissions. "
 				+ manifest.getNumberOfPermissions() + " permissions requested.");
+		
+		// iterate over <uses-permission-23>
+		parsePermissionsNew(doc, manifest);
+	}
+	
+	private void parsePermissionsNew(Document doc, ManifestInterface manifest) {
+		NodeList requestedPermissions = doc
+				.getElementsByTagName("uses-permission-sdk-23"); //$NON-NLS-1$
+		Element permission;
+		Attr name;
+		LOGGER.debug("Analyzing requested permissions for API level +23...");
+
+		// iterate over all permissions requested in the manifest
+		for (int permissionNr = 0; permissionNr < requestedPermissions
+				.getLength(); permissionNr++) {
+			permission = (Element) requestedPermissions.item(permissionNr);
+			name = permission.getAttributeNodeNS(ANDROID_ATTR_NS, "name");
+			//default permission is created in case further parsing fails
+			PermissionRequest request = new PermissionRequest(new Permission(name.getValue()));
+			manifest.addPermissionRequest(request);
+			LOGGER.debug("Requested permission: "+ request.getRequestedPermission());
+		}
+		LOGGER.debug("Finished analyzing requested permissions. "
+				+ manifest.getNumberOfPermissions() + " permissions requested.");
 	}
 
 }
