@@ -101,8 +101,8 @@ public class SetupFileSystemStep extends AbstractStep {
 		// set smali directory of the Application (containing smali, java and
 		// class files)
 		File bytecodeDirectory = new File(
-				decompiledContentDir.getAbsolutePath() + File.separator
-						+ File.separator + "smali");
+				decompiledContentDir.getAbsolutePath() + File.separator);
+//						+ File.separator + "smali");
 		LOGGER.debug("The smali files will be at: "+bytecodeDirectory.getAbsolutePath());
 		bytecodeDirectory.mkdirs();
 		app.setBytecodeDirectory(bytecodeDirectory);
