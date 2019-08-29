@@ -129,4 +129,11 @@
 	<heuristic-pattern pattern=""
 		type="PATCHED_CODE" hvalue="0" description="Search for BBs w/ possible patched code"
 		active="true" />
+
+
+  <heuristic-pattern pattern="android/telephony/TelephonyManager->getImei"
+		type="INVOKE" hvalue="0" description="IMEI API Level 26+" active="true" />
+
+  <heuristic-pattern pattern="android/telephony/TelephonyManager->getMeid" 
+    type="INVOKE"	hvalue="0" description="MEID API Level 26+" active="true" />
 </heuristic-patterns>
