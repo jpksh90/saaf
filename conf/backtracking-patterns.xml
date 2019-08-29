@@ -179,4 +179,20 @@
 		description="Thread.sleep(long, int)" method="sleep" parameters="JI"
 		interesting="0" />
 
+
+  <backtracking-pattern active="true"
+		class="android/telephony/SmsManager" method="sendDataMessage"
+		parameters="Ljava/lang/String;Ljava/lang/String;S[BLandroid/app/PendingIntent;Landroid/app/PendingIntent;"
+		description="NEW - Number of a SMS data message " interesting="0" />
+
+  <backtracking-pattern active="true"
+		class="android/telephony/SmsManager" method="sendMultimediaMessage"
+		parameters="Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/PendingIntent;"
+		description="NEW - Send MMS " interesting="2" />
+
+  <backtracking-pattern active="true"
+		class="android/telephony/SmsManager" method="sendMultipartTextMessage"
+		parameters="Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;"
+		description="NEW - Send Multipart Message " interesting="0" />
+
 </backtracking-patterns>
