@@ -1,0 +1,93 @@
+show databases;
+
+#drop database saafdb_test; 
+#create database saafdb_test;
+
+use saafdb_test;
+show tables;
+select * from ads;
+select * from apk_files;
+select * from analyses;
+select * from classes;
+select * from permission_requests;
+select * from permissions;
+
+select * from heuristic_pattern;
+select * from heuristic_results;
+
+select * from backtrack_pattern;
+select * from backtrack_results;
+
+
+/*
+select  (select count(distinct id) from analyses) as analysis_count, 
+		count(distinct id_analyses) apps_with_xxx, 
+		(CONCAT(ROUND((count(distinct id_analyses) / 
+			(select count(distinct id) from analyses) * 100), 2), '%')) as percentage
+from heuristic_results 
+where id_heuristic_pattern IN (23);
+
+select count(distinct id) from analyses;
+select * from heuristic_results where id_heuristic_pattern IN (28);
+select * from backtrack_results where id_backtrack_pattern IN (5); 
+select count(distinct id_analyses) from heuristic_results where id_heuristic_pattern IN (28);
+
+
+
+
+
+select r.value, count(r.value) as occur
+from backtrack_results r
+where r.id_backtrack_pattern IN (12,13)
+	and r.fuzzy_level IN (0)
+group by r.value
+ORDER BY occur DESC;
+
+select p.name, r.permission_id, count(r.permission_id) as occur
+from permission_requests r
+	left join permissions p on r.permission_id = p.id
+group by r.permission_id
+ORDER BY occur DESC
+limit 10;
+
+SELECT  a.permission_id, 
+		(select COUNT(DISTINCT analysis_id) from permission_requests) as apk_count,
+        COUNT(a.permission_id) as request_count, 
+        b.name,
+		(CONCAT(ROUND((COUNT(a.permission_id) / (select COUNT(DISTINCT analysis_id) 
+			from permission_requests) * 100), 2), '%')) as percentage
+FROM    permission_requests a
+        LEFT JOIN permissions b
+            ON  a.permission_id = b.id
+GROUP   BY a.permission_id
+ORDER BY COUNT(a.permission_id) DESC LIMIT 10;
+
+select r.id_analyses, r.value, a.file_name 
+from backtrack_results r
+	left join apk_files a on p.analyses_id = a.id
+where id_backtrack_pattern IN (5,6,7,8);
+
+
+
+SELECT       value,
+             COUNT(value) AS occur 
+    FROM     backtrack_results
+    GROUP BY value
+    ORDER BY occur DESC
+    LIMIT    10;
+
+*/
+
+#select * from analyses where id > 1000;
+/*
+select * from backtrack_results;
+select * from error_messages;
+select * from heuristic_results;
+select * from methods;
+select * from packages;
+select * from permission_requests;
+select * from permissions;
+select * from v_ana;
+select * from v_apk;
+select * from v_bt;
+*/
