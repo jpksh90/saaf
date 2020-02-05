@@ -311,7 +311,7 @@ public class FileTree extends JInternalFrame implements PropertyChangeListener {
 
 		DefaultMutableTreeNode node = null;
 		@SuppressWarnings("unchecked")
-		Enumeration<DefaultMutableTreeNode> e = ((DefaultMutableTreeNode) fileTree
+		Enumeration<TreeNode> e = ((DefaultMutableTreeNode) fileTree
 				.getModel().getRoot()).breadthFirstEnumeration();
 
 		while (e.hasMoreElements()) {
