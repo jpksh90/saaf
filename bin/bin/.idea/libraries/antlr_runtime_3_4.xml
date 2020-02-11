@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="antlr-runtime-3.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/antlr-runtime-3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apktool-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-debug-all-3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-cli-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dex-ir-1.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dex-reader-1.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dex-translator-0.0.9.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jgraphx.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-simple-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/smali-1.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ST-4.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/apktool-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/smali-1.4.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>

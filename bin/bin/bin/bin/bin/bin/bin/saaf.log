@@ -1,0 +1,1498 @@
+05 Feb 2020 16:22:26,254 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:22:26,263 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:22:26,263 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:22:31,749 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:22:31,757 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:22:31,757 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:22:33,664 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:22:33,671 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:22:33,672 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:25:24,116 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:25:24,123 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:25:24,124 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:25:24,127 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:25:24,132 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:25:24,150 [main] INFO  Main  - Checking DB and creating tables if necessary...
+05 Feb 2020 16:25:24,283 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+05 Feb 2020 16:25:36,414 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:25:36,422 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:25:36,422 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:25:36,426 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:25:36,430 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:25:36,448 [main] INFO  Main  - Checking DB and creating tables if necessary...
+05 Feb 2020 16:25:36,580 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+05 Feb 2020 16:26:52,820 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:26:52,827 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:26:52,828 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:32:12,557 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:32:12,564 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:32:12,565 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:32:12,568 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:32:12,573 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:32:12,590 [main] INFO  Main  - Checking DB and creating tables if necessary...
+05 Feb 2020 16:32:12,718 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+05 Feb 2020 16:32:15,688 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:32:15,696 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:32:15,696 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:32:15,699 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:32:15,704 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:32:15,724 [main] INFO  Main  - Checking DB and creating tables if necessary...
+05 Feb 2020 16:32:15,853 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+05 Feb 2020 16:32:41,039 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:32:41,047 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:32:41,047 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:32:58,280 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:32:58,288 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:32:58,288 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:44:32,244 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:44:32,252 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:44:32,252 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:44:48,372 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:44:48,380 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:44:48,380 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:44:48,384 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:44:48,389 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:44:48,408 [main] INFO  Main  - Checking DB and creating tables if necessary...
+05 Feb 2020 16:44:48,542 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+05 Feb 2020 16:44:52,546 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:44:52,554 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:44:52,555 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 16:59:54,753 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 16:59:54,760 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 16:59:54,761 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 18:24:11,294 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 18:24:11,301 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 18:24:11,301 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 18:24:11,305 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 18:24:11,310 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 18:24:11,327 [main] INFO  Main  - Checking DB and creating tables if necessary...
+05 Feb 2020 18:24:11,461 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+05 Feb 2020 18:24:30,196 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+05 Feb 2020 18:24:30,204 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 18:24:30,204 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 18:24:30,208 [main] INFO  Config  - Validating configuration...
+05 Feb 2020 18:24:30,213 [main] INFO  Config  - Config looks sane, proceeding.
+05 Feb 2020 18:24:30,230 [main] INFO  Main  - Checking DB and creating tables if necessary...
+05 Feb 2020 18:24:30,358 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+06 Feb 2020 14:30:58,435 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 14:30:58,450 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 14:30:58,450 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 14:30:58,454 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 14:30:58,456 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 14:30:58,475 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 14:30:58,601 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+06 Feb 2020 14:35:32,439 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 14:35:32,446 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 14:35:32,447 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 14:35:32,450 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 14:35:32,455 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 14:35:32,472 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 14:35:32,600 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:350)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2393)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:493)
+	at java.base/sun.nio.ch.Net.connect(Net.java:482)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:339)
+	at java.base/java.net.Socket.connect(Socket.java:603)
+	at java.base/java.net.Socket.connect(Socket.java:552)
+	at java.base/java.net.Socket.<init>(Socket.java:475)
+	at java.base/java.net.Socket.<init>(Socket.java:283)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:257)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	... 18 more
+06 Feb 2020 15:34:15,392 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 15:34:15,400 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 15:34:15,400 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 15:34:15,404 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 15:34:15,405 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 15:34:15,423 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 15:34:15,614 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:923)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1715)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 15:38:08,379 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 15:38:08,387 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 15:38:08,387 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 15:38:08,398 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 15:38:08,400 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 15:38:08,419 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 15:38:08,610 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:923)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1715)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 16:01:48,990 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 16:01:49,006 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 16:01:49,007 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 16:01:49,011 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 16:01:49,012 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 16:01:49,030 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 16:01:49,219 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:923)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1715)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 16:18:02,492 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 16:18:02,507 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 16:18:02,507 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 16:18:02,511 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 16:18:02,513 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 16:18:02,529 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 16:18:02,720 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:923)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1715)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:09:55,847 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:09:55,862 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:09:55,862 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:09:55,866 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:09:55,867 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:09:55,884 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:09:56,074 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Unable to load authentication plugin 'caching_sha2_password'.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:923)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1715)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:14:26,995 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:14:27,002 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:14:27,003 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:14:27,006 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:14:27,011 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:14:27,028 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:14:27,217 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:15:40,177 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:15:40,184 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:15:40,185 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:15:40,188 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:15:40,193 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:15:40,210 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:15:40,399 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:15:59,282 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:15:59,289 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:15:59,289 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:15:59,293 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:15:59,298 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:15:59,315 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:15:59,505 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:17:57,486 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:17:57,494 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:17:57,494 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:17:57,498 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:17:57,503 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:17:57,519 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:17:57,709 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:23:06,184 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:23:06,191 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:23:06,192 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:23:06,195 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:23:06,200 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:23:06,217 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:23:06,402 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:35:28,221 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:35:28,229 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:35:28,229 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:35:28,233 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:35:28,237 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:35:28,254 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:35:28,445 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:44:21,134 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:44:21,141 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:44:21,141 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:44:21,145 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:44:21,149 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:44:21,167 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:44:21,357 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:55:15,401 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:55:15,408 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:55:15,409 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:55:15,412 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:55:15,417 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:55:15,434 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:55:15,623 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 17:56:34,836 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 17:56:34,844 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:56:34,844 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:56:34,848 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 17:56:34,852 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 17:56:34,870 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 17:56:35,060 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'saaftest'
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'saaftest'
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:919)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1694)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1244)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2397)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2430)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+06 Feb 2020 18:00:31,078 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 18:00:31,085 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 18:00:31,086 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 18:00:31,089 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 18:00:31,094 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 18:00:31,111 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 18:00:31,355 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+06 Feb 2020 18:07:02,823 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+06 Feb 2020 18:07:02,830 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 18:07:02,830 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 18:07:02,834 [main] INFO  Config  - Validating configuration...
+06 Feb 2020 18:07:02,839 [main] INFO  Config  - Config looks sane, proceeding.
+06 Feb 2020 18:07:02,856 [main] INFO  Main  - Checking DB and creating tables if necessary...
+06 Feb 2020 18:07:03,083 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 12:31:34,953 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 12:31:34,963 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 12:31:34,964 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 12:31:34,967 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 12:31:34,969 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 12:31:34,985 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 12:31:35,214 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 12:37:50,561 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 12:37:50,568 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 12:37:50,569 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 12:37:50,572 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 12:37:50,577 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 12:37:50,594 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 12:37:50,820 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 13:53:24,973 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 13:53:24,981 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:53:24,982 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:53:24,986 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:53:24,988 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:53:25,008 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 13:53:25,272 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 13:54:31,009 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 13:54:31,017 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:54:31,017 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:54:31,021 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:54:31,025 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:54:31,043 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 13:54:31,270 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 13:58:08,667 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 13:58:08,677 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:58:08,677 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:58:08,683 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:58:08,687 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:58:08,713 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 13:58:08,719 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:73)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:333)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:68)
+	... 2 more
+10 Feb 2020 13:58:48,232 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 13:58:48,242 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:58:48,243 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:58:48,247 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:58:48,252 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:58:48,277 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 13:58:48,283 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:74)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:333)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:68)
+	... 2 more
+10 Feb 2020 13:59:10,227 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 13:59:10,234 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:59:10,235 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:59:10,239 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:59:10,243 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:59:10,266 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 13:59:10,271 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:74)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:333)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:68)
+	... 2 more
+10 Feb 2020 13:59:43,317 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 13:59:43,325 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:59:43,326 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:59:43,330 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 13:59:43,335 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 13:59:43,360 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 13:59:43,365 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:73)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:333)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:68)
+	... 2 more
+10 Feb 2020 14:02:30,399 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 14:02:30,407 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 14:02:30,408 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 14:02:30,413 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 14:02:30,417 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 14:02:30,438 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 14:02:30,451 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/saaftest
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:73)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/saaftest
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+10 Feb 2020 14:47:39,795 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 14:47:39,803 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 14:47:39,803 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 14:47:39,807 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 14:47:39,809 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 14:47:39,828 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 14:47:40,085 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 15:08:49,116 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 15:08:49,125 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:08:49,125 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:08:49,129 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:08:49,131 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:08:49,151 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 15:08:49,409 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 15:22:02,174 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 15:22:02,182 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:22:02,182 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:22:02,186 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:22:02,190 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:22:02,207 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 15:22:02,430 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:75)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1074)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:988)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:974)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:1041)
+	at com.mysql.jdbc.ConnectionImpl.initializePropsFromServer(ConnectionImpl.java:3481)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2215)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+Caused by: java.lang.ClassCastException: class java.math.BigInteger cannot be cast to class java.lang.Long (java.math.BigInteger and java.lang.Long are in module java.base of loader 'bootstrap')
+	at com.mysql.jdbc.ConnectionImpl.buildCollationMapping(ConnectionImpl.java:992)
+	... 18 more
+10 Feb 2020 15:45:40,499 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 15:45:40,509 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:45:40,509 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:45:40,513 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:45:40,515 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:45:40,538 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 15:45:40,552 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/saaftest
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:73)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost/saaftest
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:70)
+	... 2 more
+10 Feb 2020 15:46:50,533 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 15:46:50,542 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:46:50,543 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:46:50,547 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 15:46:50,552 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 15:46:50,577 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 15:46:50,584 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:73)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:333)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:68)
+	... 2 more
+10 Feb 2020 16:37:46,245 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 16:37:46,258 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 16:37:46,258 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 16:37:46,265 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 16:37:46,267 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 16:37:46,298 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 16:37:46,307 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:73)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:333)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:68)
+	... 2 more
+10 Feb 2020 16:39:30,205 [main] INFO  Config  - SAAF will be looking for configuration in:/Users/mojumder/IdeaProjects/saaf/conf
+10 Feb 2020 16:39:30,215 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 16:39:30,216 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 16:39:30,221 [main] INFO  Config  - Validating configuration...
+10 Feb 2020 16:39:30,223 [main] INFO  Config  - Config looks sane, proceeding.
+10 Feb 2020 16:39:30,248 [main] INFO  Main  - Checking DB and creating tables if necessary...
+10 Feb 2020 16:39:30,254 [main] ERROR Main  - An error occured
+de.rub.syssec.saaf.db.persistence.exceptions.PersistenceException: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:73)
+	at de.rub.syssec.saaf.Main.prepare(Main.java:151)
+	at de.rub.syssec.saaf.Main.main(Main.java:80)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:333)
+	at de.rub.syssec.saaf.db.DatabaseHelper.<init>(DatabaseHelper.java:68)
+	... 2 more
