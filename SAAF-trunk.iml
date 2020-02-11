@@ -25,7 +25,7 @@
       <src_folder value="file://$MODULE_DIR$/resources" expected_position="2" />
     </src_description>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -217,7 +217,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="hamcrest-core-1.31" level="project" />
-    <orderEntry type="library" name="Maven: com.github.tony19:apktool-lib:1.4.4-5" level="project" />
     <orderEntry type="library" name="Maven: org.antlr:antlr-runtime:3.5" level="project" />
     <orderEntry type="library" name="Maven: org.antlr:stringtemplate:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
@@ -225,6 +224,5 @@
     <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.4" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
     <orderEntry type="library" name="Maven: com.carrotsearch.jdk19:commons-lang:2.6.1" level="project" />
-    <orderEntry type="library" name="Maven: error:error:unknown" level="project" />
   </component>
 </module>
